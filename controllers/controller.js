@@ -27,6 +27,4 @@ function createCar() {
 // clear fields
 function clearFields() {
     console.log('I work clean');
-    document.getElementsByClassName("form-control").innerText = "";
-    var lists = document.querySelectorAll(".form-control");
 }
