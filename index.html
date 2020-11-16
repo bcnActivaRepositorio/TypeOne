@@ -87,11 +87,21 @@
                     </div>
                   </div>  
             </div><!--End Row car-->
+          <!--Buttons car-->
+          <div class="row justify-content-around align-items-center mt-5">
 
+            <div class="col-2">
+                <p class="lead">
+                    <a class="btn btn-primary btn-lg text-capitalize" id="create" role="button" >create car</a>
+                  </p>
+            </div>
+
+        </div>
+        <!--End Buttons-->
             <!--Hide wheels beguinning-->
             <div id="hide">
               <!--Row wheels-->
-            <div class="row justify-content-around d-none">
+            <div class="row justify-content-around d-none" id="sizeWheelsCar">
               <div class="col-6">
                 <div class="card bg-transparent border-0">
                   <div class="card-body ">
@@ -102,10 +112,14 @@
                            
                             <select id="inputWheel"  class="form-control">
                              <option selected value="">Check yuor wheels size</option>
-                             <option>17"</option>
-                             <option>19"</option>
-                             <option>21"</option>
-                             <option>23"</option>                    
+                             <option>13</option>
+                             <option>15</option>
+                             <option>17</option>
+                             <option>19</option>
+                             <option>21</option>
+                             <option>23</option>                    
+                             <option>25</option>                    
+                             <option>27</option>                    
                            </select>
                            
                           </div>
@@ -138,34 +152,23 @@
                   </div>
                 </div>
               </div>
+              <div id="boton" class="col-12 d-flex justify-content-center">
+                <button  class="btn btn-primary" id="createWheels">Add wheels</button>
+            </div>  
             </div><!--End row wheels-->
           </div><!--End Hide Div-->
-          <!--Buttons-->
-            <div class="row justify-content-around align-items-center mt-5">
-                <div class="col-2">
-                    <p class="lead">
-                        <a class="btn btn-primary btn-lg text-capitalize" id="startCar" role="button" >Let's start</a>
-                      </p>
-                </div>
-                <div class="col-2">
-                    <p class="lead">
-                        <a class="btn btn-primary btn-lg text-capitalize" id="create" role="button" >create car</a>
-                      </p>
-                </div>
-                <div class="col-2">
-                    <p class="lead">
-                        <a class="btn btn-primary btn-lg text-capitalize" id="cleanField" role="button" >clear fields</a>
-                      </p>
-                </div>
-            </div>
-            <!--End Buttons-->
+
+            <!--wheels begin here-->
+         
+            <!--wheels finish here-->
             <div class="row justify-content-center mt-5 d-none" id="showCar">
                 <div class="col-3">
                   <div class="card text-dark" style="width: 18rem;">
                     <img src="img/bg2.jpg" class="card-img-top" alt="Your new car!">
                     <div class="card-body">
                       <h5 class="card-title">This is your new car!</h5>
-                      <p id="answerMe" class="card-text text-dark text-center"></p>
+                      <p id="answerMeCar" class="card-text text-dark text-center"></p>
+                      <p id="answerMeWheels" class="card-text text-dark text-center d-none"></p>
                     </div>
                   </div>
                   <div>
