@@ -18,7 +18,7 @@ function createCar() {
     checkMe = plateValidate(plate);
     //creation of object car
     if (!checkMe) {
-        alert('Plate must have 4 numbers and 3 letters');
+        alert('Plate must have 4 numbers and 3 CAPITAL letters');
     }
     else {
         myCar = new Car(plate, color, brand);
@@ -59,20 +59,18 @@ function showDiv() {
     (checkMe) ? document.getElementById('sizeWheelsCar').classList.remove('d-none') :
         document.getElementById('sizeWheelsCar').classList.add('d-none');
 }
-//You'll tell me the whole true
-var myTrue;
 //check my plate
 function plateValidate(plate) {
-    var plateRegex = /^([0-9]{4,4}[a-z]{3,3})$/i;
-    (!plateRegex.test(plate)) ? myTrue = false : myTrue = true;
+    var plateRegex = /^([0-9]{4,4}[A-Z]{3,3})$/;
+    (!plateRegex.test(plate)) ? checkMe = false : checkMe = true;
     // tell me the true
-    return myTrue;
+    return checkMe;
 }
 //check my size
 function sizeWheel(diameter) {
-    (diameter < 17 || diameter > 21) ? myTrue = false : myTrue = true;
+    (diameter < 17 || diameter > 21) ? checkMe = false : checkMe = true;
     //tell me the true 
-    return myTrue;
+    return checkMe;
 }
 // documentacion
 // https://www.iditect.com/how-to/53742045.html
