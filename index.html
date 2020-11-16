@@ -27,7 +27,8 @@
     </header>
     <main>
         <div class="container">
-            <div class="row d-flex flex-row justify-content-between">
+          <!--Row car begun-->
+            <div class="row d-flex flex-row justify-content-between d-none">
                 <div class="col-sm-4">
                     <div class="card bg-transparent border-0">
                       <div class="card-body ">
@@ -84,11 +85,13 @@
                           </div>
                       </div>
                     </div>
-                  </div>
-                  
-                 
-            </div>
-            <div class="row justify-content-around">
+                  </div>  
+            </div><!--End Row car-->
+
+            <!--Hide wheels beguinning-->
+            <div id="hide">
+              <!--Row wheels-->
+            <div class="row justify-content-around d-none">
               <div class="col-6">
                 <div class="card bg-transparent border-0">
                   <div class="card-body ">
@@ -135,20 +138,28 @@
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="row d-flex flex-row justify-content-end align-items-center mt-5">
-                <div class="col-4">
+            </div><!--End row wheels-->
+          </div><!--End Hide Div-->
+          <!--Buttons-->
+            <div class="row justify-content-around align-items-center mt-5">
+                <div class="col-2">
                     <p class="lead">
-                        <a class="btn btn-primary btn-lg" id="create" role="button" >Create car</a>
+                        <a class="btn btn-primary btn-lg text-capitalize" id="startCar" role="button" >Let's start</a>
                       </p>
                 </div>
-                <div class="col-4">
+                <div class="col-2">
                     <p class="lead">
-                        <a class="btn btn-primary btn-lg" id="cleanField" role="button" >clear fields</a>
+                        <a class="btn btn-primary btn-lg text-capitalize" id="create" role="button" >create car</a>
+                      </p>
+                </div>
+                <div class="col-2">
+                    <p class="lead">
+                        <a class="btn btn-primary btn-lg text-capitalize" id="cleanField" role="button" >clear fields</a>
                       </p>
                 </div>
             </div>
-            <div class="row justify-content-center mt-5">
+            <!--End Buttons-->
+            <div class="row justify-content-center mt-5 d-none" id="showCar">
                 <div class="col-3">
                   <div class="card text-dark" style="width: 18rem;">
                     <img src="img/bg2.jpg" class="card-img-top" alt="Your new car!">
@@ -162,6 +173,11 @@
                 </div>
             </div>
             </div>
+
+            <!--Acordion init-->
+          
+            <!--Acordion end-->
+
         </div>
 
             <!-- <p id="carInfo"></p>

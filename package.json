@@ -6,6 +6,18 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "compilerOptions": {
+    "lib": ["es6"]
+  },
   "author": "Roberto garcia",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bcnActivaRepositorio/TypeOne.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/bcnActivaRepositorio/TypeOne/issues"
+  },
+  "homepage": "https://github.com/bcnActivaRepositorio/TypeOne#readme"
 }

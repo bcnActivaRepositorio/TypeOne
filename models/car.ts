@@ -10,13 +10,13 @@ class Car {
         this.brand=brand;
     }
   //getters
-get myPlate() {
+get myPlate(): string {
     return this.plate;
 }
-get myColor() {
+get myColor(): string {
     return this.color;
 }
- get myBrand() {
+ get myBrand(): string {
      return this.brand;
  }
  //setters

@@ -14,10 +14,10 @@ class Wheel{
         return this.brand;
     }
     // setters
-    set myDiameter(diameter) {
+    set myDiameter(diameter: any) {
         this.diameter = diameter;
     }
-    set myBrand(brand) {
+    set myBrand(brand: string) {
         this.brand = brand;
     }
 
