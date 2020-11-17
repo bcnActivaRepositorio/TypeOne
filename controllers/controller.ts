@@ -65,16 +65,14 @@ if(errorNum == 0) {
         console.log(myCar);
         console.log(new Wheel(diameter, brandWheel));
         //grab me
-let paragraph: any = document.getElementById('answerMeWheels') as HTMLInputElement;
+let paragraph: any = document.getElementById('answerMeWheels'+ i ) as HTMLInputElement;
 //you can be shown
 (checkMe) ? paragraph.classList.remove('d-none') : paragraph.classList.add('d-none');
 //write it down
-showText += " Rueda "+i+": \n" + 'Diametro: ' + myCar.wheels[i - 1].diameter + '\n' + 'Marca: ' +myCar.wheels[i - 1].brand;
+showText = " Rueda "+i+": \n" + 'Diametro: ' + myCar.wheels[i - 1].diameter + '\n' + 'Marca: ' +myCar.wheels[i - 1].brand;
+//showText = myCar.wheels[i - 1].toString();
 //print it
-document.getElementById('answerMeWheels').textContent = showText;
-//dissapear guys
-document.getElementById('create').classList.add('d-none');
-document.getElementById('createWheels').classList.add('d-none');
+paragraph.textContent = showText;
     }
 }
 
