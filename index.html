@@ -35,7 +35,7 @@
                         <h5 class="h4">Plate Number</h5>
                         <p class="h5">Four numbers and two letters.</p>
                         <div class="input-group">
-                            <input type="text" id="plateCar" placeholder="Plate car" class="form-control">
+                            <input type="text" id="plateCar" placeholder="Plate car" class="form-control" value="1972BCN">
                           </div>
                       </div>
                     </div>
@@ -49,8 +49,8 @@
                             <div class="input-group-prepend">
                                
                                 <select id="inputBrand"  class="form-control">
-                                 <option selected value="">Check our list...</option>
-                                 <option>BMW</option>
+                                 <option value="">Choose your car...</option>
+                                 <option selected >BMW</option>
                                  <option>Kia</option>
                                  <option>Seat</option>
                                  <option>Ford</option>
@@ -101,21 +101,68 @@
             <!--Hide wheels beguinning-->
             <div id="hide">
               <!--Row wheels-->
-            <div class="row justify-content-around d-none" id="sizeWheelsCar">
-              <div class="col-6">
+              
+            <div class="row  d-none" id="sizeWheelsCar">
+              <div class="row d-flex justify-content-center">
+              <div class="col-12 ">
                 <div class="card bg-transparent border-0">
                   <div class="card-body ">
                     <h5 class="h4 text-capitalize">wheels size</h5>
                     <p class="h5 card-title ">What size are you?</p>
-                    <div class="input-group justify-content-around">
-                        <div class="input-group-prepend">
+                    <div class="input-group d-flex flex-row d-flex justify-space-between">
+                        <div class="input-group-prepend col-sm">
                            
-                            <select id="inputWheel"  class="form-control">
-                             <option selected value="">Check yuor wheels size</option>
+                            <select id="inputWheel1"  class="form-control">
+                             <option  value="">Check your first wheel</option>
+                             <option>13</option>
+                             <option>15</option>
+                             <option selected >17</option>
+                             <option>19</option>
+                             <option>21</option>
+                             <option>23</option>                    
+                             <option>25</option>                    
+                             <option>27</option>                    
+                           </select>
+                           
+                          </div>
+                        <div class="input-group-prepend col-sm">
+                           
+                            <select id="inputWheel2"  class="form-control">
+                             <option  value="">Check your second wheel</option>
+                             <option>13</option>
+                             <option>15</option>
+                             <option selected >17</option>
+                             <option>19</option>
+                             <option>21</option>
+                             <option>23</option>                    
+                             <option>25</option>                    
+                             <option>27</option>                    
+                           </select>
+                           
+                          </div>
+                        <div class="input-group-prepend col-sm">
+                           
+                            <select id="inputWheel3"  class="form-control">
+                             <option  value="">Check your third wheel</option>
+                             <option>13</option>
+                             <option>15</option>
+                             <option >17</option>
+                             <option selected >19</option>
+                             <option>21</option>
+                             <option>23</option>                    
+                             <option>25</option>                    
+                             <option>27</option>                    
+                           </select>
+                           
+                          </div>
+                        <div class="input-group-prepend col-sm">
+                           
+                            <select id="inputWheel4"  class="form-control">
+                             <option  value="">Check your fourth wheel</option>
                              <option>13</option>
                              <option>15</option>
                              <option>17</option>
-                             <option>19</option>
+                             <option selected >19</option>
                              <option>21</option>
                              <option>23</option>                    
                              <option>25</option>                    
@@ -128,17 +175,58 @@
                   </div>
                 </div>
               </div>
-              <div class="col-6">
+            </div>
+            <div class="row">
+              <div class="col-12">
                 <div class="card bg-transparent border-0">
                   <div class="card-body ">
                     <h5 class="h4 ">Wheels Brands</h5>
                     <p class="h5 card-title ">Ready to find your wheels?</p>
-                    <div class="input-group justify-content-around">
-                        <div class="input-group-prepend">
+                    <div class="input-group d-flex flex-row d-flex justify-space-between">
+                        <div class="input-group-prepend  col-sm">
                            
-                            <select id="brandWheels"  class="form-control">
-                             <option selected value="">Check our list...</option>
-                             <option class="text-uppercase">bbs</option>
+                            <select id="brandWheels1"  class="form-control">
+                             <option value="">Check our list...</option>
+                             <option selected  class="text-uppercase">bbs</option>
+                             <option class="text-uppercase">ssr</option>
+                             <option class="text-uppercase">enkei</option>
+                             <option class="text-uppercase">koning</option>
+                             <option class="text-uppercase">forgiato</option>
+                             <option class="text-uppercase">oz racing</option>
+                           </select>
+                           
+                          </div>
+                        <div class="input-group-prepend col-sm">
+                           
+                            <select id="brandWheels2"  class="form-control">
+                             <option  value="">Check our list...</option>
+                             <option selected class="text-uppercase">bbs</option>
+                             <option class="text-uppercase">ssr</option>
+                             <option class="text-uppercase">enkei</option>
+                             <option class="text-uppercase">koning</option>
+                             <option class="text-uppercase">forgiato</option>
+                             <option class="text-uppercase">oz racing</option>
+                           </select>
+                           
+                          </div>
+                        <div class="input-group-prepend col-sm">
+                           
+                            <select id="brandWheels3"  class="form-control">
+                             <option  value="">Check our list...</option>
+                             <option selected class="text-uppercase">bbs</option>
+                             <option class="text-uppercase">ssr</option>
+                             <option class="text-uppercase">enkei</option>
+                             <option class="text-uppercase">koning</option>
+                             <option class="text-uppercase">forgiato</option>
+                             <option class="text-uppercase">oz racing</option>
+                           </select>
+                           
+                          </div>
+                        <div class="input-group-prepend col-sm">
+                           
+                            <select id="brandWheels4"  class="form-control">
+                             <option  value="">Check our list...</option>
+                             <option selected class="text-uppercase">bbs</option>
                              <option class="text-uppercase">ssr</option>
                              <option class="text-uppercase">enkei</option>
                              <option class="text-uppercase">koning</option>
@@ -152,6 +240,7 @@
                   </div>
                 </div>
               </div>
+            </div>
               <div id="boton" class="col-12 d-flex justify-content-center">
                 <button  class="btn btn-primary" id="createWheels">Add wheels</button>
             </div>  
@@ -182,10 +271,6 @@
             <!--Acordion end-->
 
         </div>
-
-            <!-- <p id="carInfo"></p>
-        <button onclick="createCar('1212SDS','SEAT','ROJO')">Create car</button>
-        </div> -->
     </main>
     <footer>
 

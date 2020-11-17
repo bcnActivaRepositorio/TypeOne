@@ -23,7 +23,7 @@ class Wheel{
 
     toString(){
         let text: string;
-        text = `Size: ${this.diameter} Brand: ${this.brand}`;
+        text += `Size: ${this.diameter} Brand: ${this.brand} \n`;
         return text;
     }
 

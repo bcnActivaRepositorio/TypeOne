@@ -1,6 +1,6 @@
 //global
 var myCar = Car;
-var myWheel = Wheel;
+//var myWheel: any = Wheel;
 var showText;
 var checkMe = true;
 //you trigger everything
@@ -26,33 +26,49 @@ function createCar() {
         console.log(myCar.plate);
         console.log(myCar.color);
         console.log(myCar.brand);
+        showText = "CAR: PLATE: " + myCar.plate + "\n"
+            + " COLOR: " + myCar.color + "\n" + " BRAND: " + myCar.brand;
+        //remove display none
+        (checkMe) ? cardShow.classList.remove('d-none') : cardShow.classList.add('d-none');
+        document.getElementById('answerMeCar').innerText = showText;
     }
-    showText = "CAR: PLATE: " + myCar.plate + "\n"
-        + " COLOR: " + myCar.color + "\n" + " BRAND: " + myCar.brand;
-    //remove display none
-    (checkMe) ? cardShow.classList.remove('d-none') : cardShow.classList.add('d-none');
-    document.getElementById('answerMeCar').innerText = showText;
 }
 //wheels
 function createWheels() {
     console.log('wheels works');
     // data wheels
-    var diameter = parseInt(document.getElementById('inputWheel').value);
-    var brandWheel = document.getElementById('brandWheels').value;
-    //checkWheel
-    checkMe = sizeWheel(diameter);
-    (!checkMe) ? alert("Wheel's size MUST be between 17 & 21") :
-        // new Object
-        myWheel = new Wheel(diameter, brandWheel);
-    console.log(myWheel.toString());
-    //grab me
-    var paragraph = document.getElementById('answerMeWheels');
-    //you can be shown
-    (checkMe) ? paragraph.classList.remove('d-none') : paragraph.classList.add('d-none');
-    //write it down
-    showText = myWheel.toString();
-    //print it
-    document.getElementById('answerMeWheels').textContent = showText;
+    var i;
+    var errorNum = 0;
+    var diameter;
+    var brandWheel;
+    // iterate through all of them
+    for (i = 1; i <= 4; i++) {
+        diameter = parseInt(document.getElementById('inputWheel' + i).value);
+        //checkWheel
+        checkMe = sizeWheel(diameter);
+        if (!checkMe) {
+            alert("The " + i + " wheel size MUST be between 17 & 21");
+            errorNum++;
+        }
+        brandWheel = document.getElementById('brandWheels' + i).value;
+    }
+    if (errorNum == 0) {
+        for (i = 1; i <= 4; i++) {
+            diameter = parseInt(document.getElementById('inputWheel' + i).value);
+            brandWheel = document.getElementById('brandWheels' + i).value;
+            myCar.addWheel(new Wheel(diameter, brandWheel));
+            console.log(myCar);
+            console.log(new Wheel(diameter, brandWheel));
+            //grab me
+            var paragraph = document.getElementById('answerMeWheels');
+            //you can be shown
+            (checkMe) ? paragraph.classList.remove('d-none') : paragraph.classList.add('d-none');
+            //write it down
+            showText += " Rueda " + i + ": \n" + 'Diametro: ' + myCar.wheels[i].diameter + '\n' + 'Marca: ' + myCar.wheels[i].brand;
+            //print it
+            document.getElementById('answerMeWheels').textContent = showText;
+        }
+    }
 }
 //show the div
 function showDiv() {
