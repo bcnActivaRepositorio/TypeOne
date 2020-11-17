@@ -50,7 +50,6 @@ function createWheels() {
             alert("The " + i + " wheel size MUST be between 17 & 21");
             errorNum++;
         }
-        brandWheel = document.getElementById('brandWheels' + i).value;
     }
     if (errorNum == 0) {
         for (i = 1; i <= 4; i++) {
@@ -64,8 +63,7 @@ function createWheels() {
             //you can be shown
             (checkMe) ? paragraph.classList.remove('d-none') : paragraph.classList.add('d-none');
             //write it down
-            showText = " Rueda " + i + ": \n" + 'Diametro: ' + myCar.wheels[i - 1].diameter + '\n' + 'Marca: ' + myCar.wheels[i - 1].brand;
-            //showText = myCar.wheels[i - 1].toString();
+            showText = " Rueda " + i + ": " + 'Diametro: ' + myCar.wheels[i - 1].diameter + ' ' + 'Marca: ' + myCar.wheels[i - 1].brand;
             //print it
             paragraph.textContent = showText;
         }

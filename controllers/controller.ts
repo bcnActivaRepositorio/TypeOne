@@ -33,17 +33,14 @@ if (!checkMe) {
         //remove display none
    (checkMe) ? cardShow.classList.remove('d-none') : cardShow.classList.add('d-none'); 
    document.getElementById('answerMeCar').innerText = showText;
-}
-
- 
-
+    }
 }
 //wheels
 function createWheels(){
 console.log('wheels works');
 // data wheels
 let i: number;
-let errorNum: number   = 0;
+let errorNum: number = 0;
 let diameter: number;
 let brandWheel: string;
  // iterate through all of them
@@ -55,7 +52,7 @@ if(!checkMe) {
     alert(`The ${i} wheel size MUST be between 17 & 21`);
     errorNum++;
 } 
-    brandWheel = (document.getElementById('brandWheels' + i) as HTMLInputElement).value;
+
 }
 if(errorNum == 0) {
     for(i = 1; i <= 4; i++){
@@ -69,8 +66,8 @@ let paragraph: any = document.getElementById('answerMeWheels'+ i ) as HTMLInputE
 //you can be shown
 (checkMe) ? paragraph.classList.remove('d-none') : paragraph.classList.add('d-none');
 //write it down
-showText = " Rueda "+i+": \n" + 'Diametro: ' + myCar.wheels[i - 1].diameter + '\n' + 'Marca: ' +myCar.wheels[i - 1].brand;
-//showText = myCar.wheels[i - 1].toString();
+showText = " Rueda "+i+": " + 'Diametro: ' + myCar.wheels[i - 1].diameter + ' ' + 'Marca: ' +myCar.wheels[i - 1].brand;
+
 //print it
 paragraph.textContent = showText;
     }
